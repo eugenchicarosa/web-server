@@ -16,7 +16,7 @@ weatherForm.addEventListener("submit", (e) => {
           messageTwo.textContent = data.error;
           console.log(data.error);
         } else {
-          messageTwo.textContent = `Summary: ${data.description}, with a temperature of ${data.temperature} degrees, precipitation chances of ${data.precipitation}% in ${data.location}`;
+          messageTwo.textContent = `Summary: ${data.description}, with a temperature of ${data.temperature} degrees, precipitation chances of ${data.precipitation}% in ${data.location} with a wind speed of ${data.wind_speed} km/h.`;
           console.log(data);
         }
       });

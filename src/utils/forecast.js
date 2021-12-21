@@ -8,10 +8,12 @@ const forecast = (lat, long, callback) => {
     } else if (body.error) {
       callback("Unable to find location", undefined);
     } else {
+      console.log(body.current);
       callback(undefined, {
         description: body.current.weather_descriptions[0],
         temperature: body.current.temperature,
         precipitation: body.current.precip,
+        wind_speed: body.current.wind_speed,
       });
     }
   });

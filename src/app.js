@@ -48,6 +48,7 @@ app.get("/weather", (req, res) => {
         description: forecastData.description,
         temperature: forecastData.temperature,
         precipitation: forecastData.precipitation,
+        wind_speed: forecastData.wind_speed,
         address: req.query.address,
         location: place_name,
       });
